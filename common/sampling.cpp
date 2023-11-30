@@ -191,7 +191,21 @@ llama_token llama_sampling_sample(
         }
     }
 
-    if (ctx_sampling->grammar != NULL) {
+    if (params.dynamic_grammar) {
+        std::string grammar_str = "root ::= \"f\"";
+        ctx_sampling->parsed_grammar = grammar_parser::parse(grammar_str.c_str());
+
+        // will be empty (default) if there are parse errors
+        if (ctx_sampling->parsed_grammar.rules.empty()) {
+            fprintf(stderr, "%s: failed to parse grammar\n", __func__);
+        } else {
+            std::vector<const llama_grammar_element *> grammar_rules(ctx_sampling->parsed_grammar.c_rules());
+            ctx_sampling->grammar = llama_grammar_init(
+                    grammar_rules.data(),
+                    grammar_rules.size(), ctx_sampling->parsed_grammar.symbol_ids.at("root"));
+            llama_sample_grammar(ctx_main, &cur_p, ctx_sampling->grammar);
+        }
+    } else if (ctx_sampling->grammar != NULL) {
         llama_sample_grammar(ctx_main, &cur_p, ctx_sampling->grammar);
     }
 

@@ -27,6 +27,7 @@ typedef struct llama_sampling_params {
     bool    penalize_nl       = true;  // consider newlines as a repeatable token
 
     std::string grammar;  // optional BNF-like grammar to constrain sampling
+    bool dynamic_grammar      = false;
 
     // Classifier-Free Guidance
     // https://arxiv.org/abs/2306.17806
