@@ -553,6 +553,8 @@ extern "C" {
 
     LLAMA_API struct llama_grammar * llama_grammar_copy(const struct llama_grammar * grammar);
 
+    LLAMA_API size_t llama_grammar_get_stack_size(const struct llama_grammar * grammar);
+
     //
     // Sampling functions
     //

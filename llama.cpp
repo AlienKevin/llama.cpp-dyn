@@ -7263,6 +7263,10 @@ struct llama_grammar * llama_grammar_copy(const struct llama_grammar * grammar) 
     return result;
 }
 
+size_t llama_grammar_get_stack_size(const struct llama_grammar * grammar) {
+    return grammar->stacks.size();
+}
+
 //
 // sampling
 //

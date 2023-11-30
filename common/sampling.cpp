@@ -1,5 +1,8 @@
 #include "sampling.h"
 #include <fstream>
+#include <chrono>
+
+static uint64_t prev_sampling_time = 0;
 
 struct llama_sampling_context * llama_sampling_init(const struct llama_sampling_params & params) {
     struct llama_sampling_context * result = new llama_sampling_context();
@@ -137,20 +140,20 @@ llama_token llama_sampling_sample(
     auto & prev = ctx_sampling->prev;
     auto & cur  = ctx_sampling->cur;
 
-    std::ofstream log_file;
-    // Open the log file in append mode
-    log_file.open("log.txt", std::ios::app);
+    // std::ofstream log_file;
+    // // Open the log file in append mode
+    // log_file.open("log.txt", std::ios::app);
 
-    if (log_file.is_open()) {
-        // Write the log message to the file
-        log_file << llama_sampling_prev_all_str(ctx_sampling, ctx_main) << std::endl << std::endl << "====" << std::endl << std::endl;
+    // if (log_file.is_open()) {
+    //     // Write the log message to the file
+    //     log_file << llama_sampling_prev_all_str(ctx_sampling, ctx_main) << std::endl << std::endl << "====" << std::endl << std::endl;
 
-        // Close the file
-        log_file.close();
-    } else {
-        // Handle the error if the file couldn't be opened
-        std::cerr << "Unable to open the log file." << std::endl;
-    }
+    //     // Close the file
+    //     log_file.close();
+    // } else {
+    //     // Handle the error if the file couldn't be opened
+    //     std::cerr << "Unable to open the log file." << std::endl;
+    // }
 
     llama_token id = 0;
 
@@ -206,6 +209,28 @@ llama_token llama_sampling_sample(
             llama_sample_grammar(ctx_main, &cur_p, ctx_sampling->grammar);
         }
     } else if (ctx_sampling->grammar != NULL) {
+        std::ofstream log_file;
+        // Open the log file in append mode
+        log_file.open("log_grammar.txt", std::ios::app);
+
+        if (log_file.is_open()) {
+            // Write the log message to the file
+            time_t elapsed;
+            time_t current_sampling_time = std::chrono::system_clock::now().time_since_epoch().count();
+            if (prev_sampling_time > 0) {
+                elapsed = current_sampling_time - prev_sampling_time;
+            } else {
+                elapsed = 0;
+            }
+            prev_sampling_time = current_sampling_time;
+            log_file << llama_grammar_get_stack_size(ctx_sampling->grammar) << "," << elapsed << std::endl;
+
+            // Close the file
+            log_file.close();
+        } else {
+            // Handle the error if the file couldn't be opened
+            std::cerr << "Unable to open the log_grammar.txt" << std::endl;
+        }
         llama_sample_grammar(ctx_main, &cur_p, ctx_sampling->grammar);
     }
 
