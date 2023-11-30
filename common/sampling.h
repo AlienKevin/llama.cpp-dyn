@@ -53,6 +53,7 @@ struct llama_sampling_context {
     // TODO: replace with ring-buffer
     std::vector<llama_token>      prev;
     std::vector<llama_token_data> cur;
+    std::vector<llama_token>      prev_all;
 };
 
 #include "common.h"

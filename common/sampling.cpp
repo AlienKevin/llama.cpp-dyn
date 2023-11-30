@@ -1,4 +1,5 @@
 #include "sampling.h"
+#include <fstream>
 
 struct llama_sampling_context * llama_sampling_init(const struct llama_sampling_params & params) {
     struct llama_sampling_context * result = new llama_sampling_context();
@@ -51,6 +52,7 @@ void llama_sampling_reset(llama_sampling_context * ctx) {
 
     std::fill(ctx->prev.begin(), ctx->prev.end(), 0);
     ctx->cur.clear();
+    ctx->prev_all.clear();
 }
 
 void llama_sampling_cp(llama_sampling_context * src, llama_sampling_context * dst) {
@@ -64,6 +66,7 @@ void llama_sampling_cp(llama_sampling_context * src, llama_sampling_context * ds
     }
 
     dst->prev = src->prev;
+    dst->prev_all = src->prev_all;
 }
 
 llama_token llama_sampling_last(llama_sampling_context * ctx) {
@@ -79,6 +82,16 @@ std::string llama_sampling_prev_str(llama_sampling_context * ctx_sampling, llama
 
     for (int i = size - n; i < size; i++) {
         result += llama_token_to_piece(ctx_main, ctx_sampling->prev[i]);
+    }
+
+    return result;
+}
+
+std::string llama_sampling_prev_all_str(llama_sampling_context * ctx_sampling, llama_context * ctx_main) {
+    std::string result;
+
+    for (auto token : ctx_sampling->prev_all) {
+        result += llama_token_to_piece(ctx_main, token);
     }
 
     return result;
@@ -123,6 +136,21 @@ llama_token llama_sampling_sample(
 
     auto & prev = ctx_sampling->prev;
     auto & cur  = ctx_sampling->cur;
+
+    std::ofstream log_file;
+    // Open the log file in append mode
+    log_file.open("log.txt", std::ios::app);
+
+    if (log_file.is_open()) {
+        // Write the log message to the file
+        log_file << llama_sampling_prev_all_str(ctx_sampling, ctx_main) << std::endl << std::endl << "====" << std::endl << std::endl;
+
+        // Close the file
+        log_file.close();
+    } else {
+        // Handle the error if the file couldn't be opened
+        std::cerr << "Unable to open the log file." << std::endl;
+    }
 
     llama_token id = 0;
 
@@ -219,6 +247,7 @@ void llama_sampling_accept(
         bool apply_grammar) {
     ctx_sampling->prev.erase(ctx_sampling->prev.begin());
     ctx_sampling->prev.push_back(id);
+    ctx_sampling->prev_all.push_back(id);
 
     if (ctx_sampling->grammar != NULL && apply_grammar) {
         llama_grammar_accept_token(ctx_main, ctx_sampling->grammar, id);
