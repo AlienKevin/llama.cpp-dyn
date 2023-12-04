@@ -1,6 +1,7 @@
 #include "sampling.h"
 #include <fstream>
 #include <chrono>
+#include <regex>
 
 static uint64_t prev_sampling_time = 0;
 
@@ -114,6 +115,41 @@ std::string llama_sampling_print(const llama_sampling_params & params) {
     return std::string(result);
 }
 
+std::string exec(const char* cmd) {
+    std::array<char, 128> buffer;
+    std::string result;
+    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
+    }
+    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+        result += buffer.data();
+    }
+    return result;
+}
+
+std::string extract_substring_after_delimiter(const std::string& str, const std::string& delimiter) {
+    size_t pos = str.find(delimiter);
+    if (pos != std::string::npos) {
+        // Add the length of the delimiter to 'pos' to start after the delimiter
+        pos += delimiter.length();
+
+        // Extract the substring from 'pos' to the end of the string
+        std::string extracted = str.substr(pos);
+
+        // Optional: trim leading whitespace if needed
+        size_t start = extracted.find_first_not_of(" \n\r\t\f\v");
+        return (start == std::string::npos) ? "" : extracted.substr(start);
+    }
+    return ""; // Return empty string if delimiter is not found
+}
+
+std::string fix_grammar(const std::string& grammar) {
+    std::regex pattern(R"(\n\s*\|)");
+    std::string replacement = " |";
+    return std::regex_replace(grammar, pattern, replacement);
+}
+
 llama_token llama_sampling_sample(
                   struct llama_sampling_context * ctx_sampling,
                   struct llama_context * ctx_main,
@@ -195,7 +231,12 @@ llama_token llama_sampling_sample(
     }
 
     if (params.dynamic_grammar) {
-        std::string grammar_str = "root ::= \"f\"";
+        std::string command = "node "
+                          "/Users/kevin/Dev/research/hazel/_build/default/src/"
+                          "haz3lweb/www/lsp.js ";
+        command += "\"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main) + "\"";
+        std::string output = exec(command.c_str());
+        std::string grammar_str = fix_grammar(extract_substring_after_delimiter(output, "LSP: Grammar:\n"));
         ctx_sampling->parsed_grammar = grammar_parser::parse(grammar_str.c_str());
 
         // will be empty (default) if there are parse errors
