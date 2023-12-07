@@ -145,9 +145,11 @@ std::string extract_substring_after_delimiter(const std::string& str, const std:
 }
 
 std::string fix_grammar(const std::string& grammar) {
-    std::regex pattern(R"(\n\s*\|)");
-    std::string replacement = " |";
-    return std::regex_replace(grammar, pattern, replacement);
+    std::string output = std::regex_replace(grammar, std::regex(R"(\n\s*\|)"), " |");
+    output = std::regex_replace(output, std::regex(R"(\\\/)"), "\\\\/");
+    output = std::regex_replace(output, std::regex(R"("""")"), "\"\\\"\\\"\"");
+    output = std::regex_replace(output, std::regex(R"(whitespace ::= \[ \\t\\n\]\+)"), R"(whitespace ::= [ \n]*)");
+    return output;
 }
 
 llama_token llama_sampling_sample(
@@ -175,21 +177,6 @@ llama_token llama_sampling_sample(
 
     auto & prev = ctx_sampling->prev;
     auto & cur  = ctx_sampling->cur;
-
-    // std::ofstream log_file;
-    // // Open the log file in append mode
-    // log_file.open("log.txt", std::ios::app);
-
-    // if (log_file.is_open()) {
-    //     // Write the log message to the file
-    //     log_file << llama_sampling_prev_all_str(ctx_sampling, ctx_main) << std::endl << std::endl << "====" << std::endl << std::endl;
-
-    //     // Close the file
-    //     log_file.close();
-    // } else {
-    //     // Handle the error if the file couldn't be opened
-    //     std::cerr << "Unable to open the log file." << std::endl;
-    // }
 
     llama_token id = 0;
 
@@ -237,6 +224,26 @@ llama_token llama_sampling_sample(
         command += "\"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main) + "\"";
         std::string output = exec(command.c_str());
         std::string grammar_str = fix_grammar(extract_substring_after_delimiter(output, "LSP: Grammar:\n"));
+        
+        std::ofstream log_file;
+        // Open the log file in append mode
+        log_file.open("log.txt", std::ios::app);
+
+        if (log_file.is_open()) {
+            // Write the log message to the file
+            log_file << llama_sampling_prev_all_str(ctx_sampling, ctx_main) << std::endl << std::endl << "====" << std::endl << std::endl;
+            log_file << "\nGrammar:" << std::endl;
+            log_file << output << std::endl;
+            log_file << "\nFixed Grammar:" << std::endl;
+            log_file << grammar_str << std::endl;
+
+            // Close the file
+            log_file.close();
+        } else {
+            // Handle the error if the file couldn't be opened
+            std::cerr << "Unable to open the log file." << std::endl;
+        }
+        
         ctx_sampling->parsed_grammar = grammar_parser::parse(grammar_str.c_str());
 
         // will be empty (default) if there are parse errors
