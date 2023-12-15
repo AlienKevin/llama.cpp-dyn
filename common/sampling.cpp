@@ -145,11 +145,11 @@ std::string extract_substring_after_delimiter(const std::string& str, const std:
 }
 
 std::string fix_grammar(const std::string& grammar) {
-    // std::string output = std::regex_replace(grammar, std::regex(R"(whitespace ::= \[ \\n\]\+)"), R"(whitespace ::= [ \n]*)");
+    std::string output = std::regex_replace(grammar, std::regex(R"(whitespace ::= \[ \\n\]\+)"), R"(whitespace ::= [ \n])");
     // output = std::regex_replace(output, std::regex(R"(patvar ::= \[a-zA-Z_\]\[a-zA-Z0-9_\]\*)"), R"(patvar ::= [a-zA-Z_]*)");
-    std::string output = std::regex_replace(grammar, std::regex(R"(whitespace \|)"), "");
-    output = std::regex_replace(output, std::regex(R"("then")"), R"(" then ")");
-    output = std::regex_replace(output, std::regex(R"("else")"), R"(" else ")");
+    // std::string output = std::regex_replace(grammar, std::regex(R"(whitespace \|)"), "");
+    // output = std::regex_replace(output, std::regex(R"("then")"), R"(" then ")");
+    // output = std::regex_replace(output, std::regex(R"("else")"), R"(" else ")");
     return output;
 }
 
@@ -221,10 +221,10 @@ llama_token llama_sampling_sample(
     if (params.dynamic_grammar) {
         std::string command = "node "
                           "/Users/kevin/Dev/research/hazel/_build/default/src/"
-                          "haz3lweb/www/lsp.js ";
+                          "haz3lweb/www/lsp.js --constrain grammar --debug true ";
         command += "\"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main) + "\"";
         std::string output = exec(command.c_str());
-        std::string grammar_str = fix_grammar(extract_substring_after_delimiter(output, "LSP: Grammar:\n"));
+        std::string grammar_str = extract_substring_after_delimiter(output, "LSP: Grammar:\n");
         
         std::ofstream log_file;
         // Open the log file in append mode
@@ -252,6 +252,9 @@ llama_token llama_sampling_sample(
             fprintf(stderr, "%s: failed to parse grammar\n", __func__);
         } else {
             std::vector<const llama_grammar_element *> grammar_rules(ctx_sampling->parsed_grammar.c_rules());
+            if (ctx_sampling->grammar != NULL) {
+                llama_grammar_free(ctx_sampling->grammar);
+            }
             ctx_sampling->grammar = llama_grammar_init(
                     grammar_rules.data(),
                     grammar_rules.size(), ctx_sampling->parsed_grammar.symbol_ids.at("root"));
