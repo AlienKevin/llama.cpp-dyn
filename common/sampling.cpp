@@ -156,10 +156,11 @@ std::string extract_substring_after_delimiter(const std::string& str, const std:
 }
 
 std::string fix_grammar(const std::string& grammar) {
-    std::string output = std::regex_replace(grammar, std::regex(R"(whitespace ::= \[ \\n\]\+)"), R"(whitespace ::= [ \n]*)");
+    // std::string output = std::regex_replace(grammar, std::regex(R"(whitespace ::= \[ \\n\]\+)"), R"(whitespace ::= [ \n]*)");
     // output = std::regex_replace(output, std::regex(R"(patvar ::= \[a-zA-Z_\]\[a-zA-Z0-9_\]\*)"), R"(patvar ::= [a-zA-Z_]*)");
-    output = std::regex_replace(output, std::regex(R"(root ::= whitespace \| (.+))"), R"(root ::= whitespace ($1))");
-    output = std::regex_replace(output, std::regex(R"(new_tokens)"), R"(new-tokens)");
+    // output = std::regex_replace(output, std::regex(R"(root ::= whitespace \| (.+))"), R"(root ::= whitespace ($1))");
+    
+    std::string output = std::regex_replace(grammar, std::regex(R"(new_tokens)"), R"(new-tokens)");
     return output;
 }
 

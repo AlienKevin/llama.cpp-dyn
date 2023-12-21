@@ -76,6 +76,8 @@
 #include <thread>
 #include <type_traits>
 #include <unordered_map>
+#include <iostream>
+#include <unordered_set>
 
 #if defined(_MSC_VER)
 #pragma warning(disable: 4244 4267) // possible loss of data
@@ -7653,9 +7655,20 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
     std::vector<llama_grammar_candidate>                              candidates_grammar;
     candidates_grammar.reserve(candidates->size);
 
+    std::ofstream log_file;
+    // Open the log file in append mode
+    log_file.open("log-pieces.txt", std::ios::app);
+    log_file << "<<<<====>>>>" << std::endl;
+
+    float highest_whitespace_logit = -1;
+    uint32_t space_codepoint = 0x0020;
+    size_t whitespace_candidate_index;
     for (size_t i = 0; i < candidates->size; ++i) {
         const llama_token id    = candidates->data[i].id;
         const std::string piece = llama_token_to_piece(ctx, id);
+        if (piece == " ") {
+            whitespace_candidate_index = i;
+        }
         if (id == eos) {
             if (!allow_eos) {
                 candidates->data[i].logit = -INFINITY;
@@ -7665,13 +7678,63 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
         } else {
             candidates_decoded.push_back(decode_utf8(piece, grammar->partial_utf8));
             candidates_grammar.push_back({ i, candidates_decoded.back().first.data(), candidates_decoded.back().second });
+            auto const &codepoints = candidates_decoded.back().first;
+            float const logit = candidates->data[i].logit;
+            if (logit > highest_whitespace_logit && !codepoints.empty() && codepoints[0] == space_codepoint) {
+                highest_whitespace_logit = logit;
+            }
+        }
+    }
+    candidates->data[whitespace_candidate_index].logit = highest_whitespace_logit;
+    log_file << "whitespace_candidate_index = " << whitespace_candidate_index << std::endl;
+    log_file << "highest_whitespace_logit = " << highest_whitespace_logit << std::endl << std::endl;
+
+    std::vector<size_t> all_vector;
+    for (size_t i = 0; i < candidates->size; ++i) {
+        all_vector.push_back(i);
+    }
+    std::sort(all_vector.begin(), all_vector.end(), [&candidates](size_t a, size_t b) {
+        return candidates->data[a].logit > candidates->data[b].logit;
+    });
+
+    for (const auto & i : all_vector) {
+        if (log_file.is_open()) {
+            log_file << llama_token_to_piece(ctx, candidates->data[i].id) << ":" << candidates->data[i].logit << std::endl;
+        } else {
+            // Handle the error if the file couldn't be opened
+            std::cerr << "Unable to open the log file." << std::endl;
         }
     }
 
     const auto rejects = llama_grammar_reject_candidates(grammar->rules, grammar->stacks, candidates_grammar);
+    std::unordered_set<size_t> accepted_indices;
+    for (size_t i = 0; i < candidates->size; i++) {
+        accepted_indices.insert(i);
+    }
     for (const auto & reject : rejects) {
         candidates->data[reject.index].logit = -INFINITY;
+        accepted_indices.erase(accepted_indices.find(reject.index));
     }
+
+    // Print accepted candidates
+    // std::vector<size_t> accepted_vector;
+    // for (const auto & i : accepted_indices) {
+    //     accepted_vector.push_back(i);
+    // }
+    // std::sort(accepted_vector.begin(), accepted_vector.end(), [&candidates](size_t a, size_t b) {
+    //     return candidates->data[a].logit > candidates->data[b].logit;
+    // });
+
+    // for (const auto & i : accepted_vector) {
+    //     if (log_file.is_open()) {
+    //         log_file << llama_token_to_piece(ctx, candidates->data[i].id) << ":" << candidates->data[i].logit << std::endl;
+    //     } else {
+    //         // Handle the error if the file couldn't be opened
+    //         std::cerr << "Unable to open the log file." << std::endl;
+    //     }
+    // }
+    // Close the file
+    log_file.close();
 
     ctx->t_sample_us += ggml_time_us() - t_start_sample_us;
 }
