@@ -202,6 +202,18 @@ bool gpt_params_parse_ex(int argc, char ** argv, gpt_params & params) {
             if (!params.prompt.empty() && params.prompt.back() == '\n') {
                 params.prompt.pop_back();
             }
+        } else if (arg == "--prelude") {
+            if (++i >= argc) {
+                invalid_param = true;
+                break;
+            }
+            std::ifstream file(argv[i]);
+            if (!file) {
+                fprintf(stderr, "error: failed to open prelude '%s'\n", argv[i]);
+                invalid_param = true;
+                break;
+            }
+            std::copy(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>(), back_inserter(sparams.prelude));
         } else if (arg == "-n" || arg == "--n-predict") {
             if (++i >= argc) {
                 invalid_param = true;

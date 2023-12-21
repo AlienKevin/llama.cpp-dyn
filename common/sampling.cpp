@@ -58,6 +58,7 @@ void llama_sampling_reset(llama_sampling_context * ctx) {
     std::fill(ctx->prev.begin(), ctx->prev.end(), 0);
     ctx->cur.clear();
     ctx->prev_all.clear();
+    ctx->prelude_len = 0;
 }
 
 void llama_sampling_cp(llama_sampling_context * src, llama_sampling_context * dst) {
@@ -72,6 +73,7 @@ void llama_sampling_cp(llama_sampling_context * src, llama_sampling_context * ds
 
     dst->prev = src->prev;
     dst->prev_all = src->prev_all;
+    dst->prelude_len = src->prelude_len;
 }
 
 llama_token llama_sampling_last(llama_sampling_context * ctx) {
@@ -92,11 +94,19 @@ std::string llama_sampling_prev_str(llama_sampling_context * ctx_sampling, llama
     return result;
 }
 
-std::string llama_sampling_prev_all_str(llama_sampling_context * ctx_sampling, llama_context * ctx_main) {
+void llama_sampling_set_prelude_len(llama_sampling_context * ctx, size_t prelude_len) {
+    ctx->prelude_len = prelude_len;
+}
+
+std::string llama_sampling_prev_all_str(llama_sampling_context * ctx_sampling, llama_context * ctx_main, int skip_tokens) {
     std::string result;
 
     for (auto token : ctx_sampling->prev_all) {
-        result += llama_token_to_piece(ctx_main, token);
+        if (skip_tokens > 0) {
+            skip_tokens--;
+        } else {
+            result += llama_token_to_piece(ctx_main, token);
+        }
     }
 
     return result;
@@ -146,11 +156,10 @@ std::string extract_substring_after_delimiter(const std::string& str, const std:
 }
 
 std::string fix_grammar(const std::string& grammar) {
-    std::string output = std::regex_replace(grammar, std::regex(R"(whitespace ::= \[ \\n\]\+)"), R"(whitespace ::= [ \n])");
+    std::string output = std::regex_replace(grammar, std::regex(R"(whitespace ::= \[ \\n\]\+)"), R"(whitespace ::= [ \n]*)");
     // output = std::regex_replace(output, std::regex(R"(patvar ::= \[a-zA-Z_\]\[a-zA-Z0-9_\]\*)"), R"(patvar ::= [a-zA-Z_]*)");
-    // std::string output = std::regex_replace(grammar, std::regex(R"(whitespace \|)"), "");
-    // output = std::regex_replace(output, std::regex(R"("then")"), R"(" then ")");
-    // output = std::regex_replace(output, std::regex(R"("else")"), R"(" else ")");
+    output = std::regex_replace(output, std::regex(R"(root ::= whitespace \| (.+))"), R"(root ::= whitespace ($1))");
+    output = std::regex_replace(output, std::regex(R"(new_tokens)"), R"(new-tokens)");
     return output;
 }
 
@@ -268,10 +277,10 @@ llama_token llama_sampling_sample(
     if (params.dynamic_grammar) {
         std::string command = "node "
                           "/Users/kevin/Dev/research/hazel/_build/default/src/"
-                          "haz3lweb/www/lsp.js --constrain grammar --debug true ";
-        command += "\"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main) + "\"";
+                          "haz3lweb/www/lsp.js --constrain grammar --prelude ../autoregressive.prelude --debug true ";
+        command += "\"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len) + "\"";
         std::string output = exec(command.c_str());
-        std::string grammar_str = extract_substring_after_delimiter(output, "LSP: Grammar:\n");
+        std::string grammar_str = fix_grammar(extract_substring_after_delimiter(output, "LSP: Grammar:\n"));
         
         std::ofstream log_file;
         // Open the log file in append mode
@@ -279,9 +288,9 @@ llama_token llama_sampling_sample(
 
         if (log_file.is_open()) {
             // Write the log message to the file
-            log_file << llama_sampling_prev_all_str(ctx_sampling, ctx_main) << std::endl << std::endl << "====" << std::endl << std::endl;
-            log_file << "\nGrammar:" << std::endl;
-            log_file << output << std::endl;
+            log_file << llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len) << std::endl << std::endl << "====" << std::endl << std::endl;
+            // log_file << "\nGrammar:" << std::endl;
+            // log_file << output << std::endl;
             log_file << "\nFixed Grammar:" << std::endl;
             log_file << grammar_str << std::endl;
 

@@ -252,6 +252,11 @@ int main(int argc, char ** argv) {
         embd_inp = session_tokens;
     }
 
+    if (params.chatml) {
+        sparams.prelude = "<|im_start|>system\n" + params.prompt;
+    }
+    size_t prelude_len = ::llama_tokenize(ctx, sparams.prelude, add_bos, true).size();
+
     LOG("prompt: \"%s\"\n", log_tostr(params.prompt));
     LOG("tokens: %s\n", LOG_TOKENS_TOSTR_PRETTY(ctx, embd_inp).c_str());
 
@@ -481,6 +486,8 @@ int main(int argc, char ** argv) {
     std::vector<llama_token> embd_guidance;
 
     struct llama_sampling_context * ctx_sampling = llama_sampling_init(sparams);
+
+    llama_sampling_set_prelude_len(ctx_sampling, prelude_len);
 
     while ((n_remain != 0 && !is_antiprompt) || params.interactive) {
         // predict

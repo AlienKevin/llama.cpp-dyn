@@ -30,6 +30,7 @@ typedef struct llama_sampling_params {
 
     std::string grammar;  // optional BNF-like grammar to constrain sampling
     bool dynamic_grammar      = false;
+    std::string prelude;
 
     // Classifier-Free Guidance
     // https://arxiv.org/abs/2306.17806
@@ -57,6 +58,7 @@ struct llama_sampling_context {
     std::vector<llama_token>      prev;
     std::vector<llama_token_data> cur;
     std::vector<llama_token>      prev_all;
+    size_t                        prelude_len;
 };
 
 #include "common.h"
@@ -79,6 +81,10 @@ llama_token llama_sampling_last(llama_sampling_context * ctx);
 
 // Get a string representation of the last sampled tokens
 std::string llama_sampling_prev_str(llama_sampling_context * ctx_sampling, llama_context * ctx_main, int n);
+
+std::string llama_sampling_prev_all_str(llama_sampling_context * ctx_sampling, llama_context * ctx_main, int skip_tokens);
+
+void llama_sampling_set_prelude_len(llama_sampling_context * ctx, size_t prelude_len);
 
 // Print sampling parameters into a string
 std::string llama_sampling_print(const llama_sampling_params & params);
