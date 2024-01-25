@@ -7657,8 +7657,8 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
 
     std::ofstream log_file;
     // Open the log file in append mode
-    log_file.open("log-pieces.txt", std::ios::app);
-    log_file << "<<<<====>>>>" << std::endl;
+    log_file.open("log.txt", std::ios::app);
+    log_file << "Top 20 Logits:" << std::endl;
 
     float highest_whitespace_logit = -1;
     uint32_t space_codepoint = 0x0020;
@@ -7697,13 +7697,19 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
         return candidates->data[a].logit > candidates->data[b].logit;
     });
 
+    int num_logits_logged = 0;
     for (const auto & i : all_vector) {
+        // Log the top 20 logits
+        if (num_logits_logged > 20) {
+            break;
+        }
         if (log_file.is_open()) {
             log_file << llama_token_to_piece(ctx, candidates->data[i].id) << ":" << candidates->data[i].logit << std::endl;
         } else {
             // Handle the error if the file couldn't be opened
             std::cerr << "Unable to open the log file." << std::endl;
         }
+        num_logits_logged++;
     }
 
     const auto rejects = llama_grammar_reject_candidates(grammar->rules, grammar->stacks, candidates_grammar);
