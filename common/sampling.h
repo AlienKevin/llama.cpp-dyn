@@ -29,7 +29,7 @@ typedef struct llama_sampling_params {
     std::string samplers_sequence     = "kfypmt"; // top_k, tail_free, typical_p, top_p, min_p, temp
 
     std::string grammar;  // optional BNF-like grammar to constrain sampling
-    bool dynamic_grammar      = false;
+    std::string dynamic_grammar      = "";
     std::string prelude;
 
     // Classifier-Free Guidance

@@ -695,7 +695,11 @@ bool gpt_params_parse_ex(int argc, char ** argv, gpt_params & params) {
             }
             sparams.grammar = argv[i];
         } else if (arg == "--dynamic-grammar") {
-            sparams.dynamic_grammar = true;
+            if (++i >= argc) {
+                invalid_param = true;
+                break;
+            }
+            sparams.dynamic_grammar = argv[i];
         } else if (arg == "--grammar-file") {
             if (++i >= argc) {
                 invalid_param = true;
