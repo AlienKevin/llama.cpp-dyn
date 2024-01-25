@@ -1,0 +1,5253 @@
+
+let surface_area : Shape -> Float =
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | "case " | "fun " | "if " | "let " | "type ")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | "case " | "fun " | "if " | "let " | "type ")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+ 
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | "case " | "fun " | "if " | "let " | "type ")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= " "
+new-tokens ::= whitespace ("(" | "in")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "Cube" | "Cylinder" | "Sphere" | "_" | patvar)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-patvar
+new-tokens ::= whitespace ("(" | ")")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s)
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("->")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | "case " | "if " | "let " | "surface_area" | "type " | floatlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | "case " | "if " | "let " | "surface_area" | "type " | floatlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+   
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | "case " | "if " | "let " | "surface_area" | "type " | floatlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= " "
+new-tokens ::= whitespace ("(" | "**." | "*." | "+." | "-." | "/." | "in")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= ")"
+new-tokens ::= whitespace ("!" | "(" | "()" | "-" | "Cube" | "Cylinder" | "Sphere" | "[" | "[]" | "_" | "case " | "false" | "fun " | "if " | "let " | "s" | "surface_area" | "test " | "true" | "type " | floatlit | intlit | stringlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "urface_area"
+new-tokens ::= whitespace (")" | "," | "::")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("," | "::" | "end" | "|")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("," | "::" | "end" | "|")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+     
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("," | "::" | "end" | "|")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      |
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "Cube" | "Cylinder" | "Sphere" | "_" | patvar)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | S
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "phere"
+new-tokens ::= whitespace ("(" | "=>")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "=>")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | floatlit | patvar)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-patvar
+new-tokens ::= whitespace ("(" | ")")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r)
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("=>")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) =>
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | "case " | "if " | "let " | "r" | "surface_area" | "type " | floatlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "_" | "case " | "if " | "let " | "r" | "surface_area" | "type " | floatlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-floatlit
+new-tokens ::= whitespace ("end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-floatlit
+new-tokens ::= whitespace ("**." | "*." | "+." | "-." | "/." | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-floatlit
+new-tokens ::= whitespace ("**." | "*." | "+." | "-." | "/." | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*." | "."
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace ("*" | "**" | "+" | "-" | "/" | "end" | "|")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "*" | "**" | "**." | "*." | "+" | "+." | "-" | "-." | "/" | "/." | "end" | "|")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*." | "."
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415926
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314159265
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | ")" | "*" | "**" | "+" | "-" | "/")
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 *
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= "*"
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+new-tokens ::= whitespace ("(" | "-" | "_" | "case " | "if " | "let " | "type " | intlit)
+root ::= new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (314
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+
+
+let surface_area : Shape -> Float =
+  fun (s) ->
+    case (s)
+      | Sphere(r) => 4.0 * 3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (3141592653 * (31415
+
+====
+
+
+Fixed Grammar:
+whitespace ::= [ \n]*
+intlit ::= [0-9]+
+extend-intlit ::= [0-9]+
+floatlit ::= [0-9]+ "." [0-9]+
+extend-floatlit ::= [0-9]* "." [0-9]+
+stringlit ::= "\"" [^"]* "\""
+extend-stringlit ::= [^"]* "\""
+patvar ::= [a-z][a-zA-Z0-9_]*
+extend-patvar ::= [a-zA-Z0-9_]*
+typvar ::= [A-Z][a-zA-Z0-9_]*
+extend-typvar ::= [a-zA-Z0-9_]*
+constructor ::= [A-Z][a-zA-Z0-9_]*
+extend-constructor ::= [a-zA-Z0-9_]*
+
+completions ::= extend-intlit
+new-tokens ::= whitespace (")" | "*" | "**" | "+" | "-" | "/")
+root ::= completions | new-tokens
+

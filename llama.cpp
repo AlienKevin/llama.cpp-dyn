@@ -7685,9 +7685,9 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
             }
         }
     }
-    candidates->data[whitespace_candidate_index].logit = highest_whitespace_logit;
-    log_file << "whitespace_candidate_index = " << whitespace_candidate_index << std::endl;
-    log_file << "highest_whitespace_logit = " << highest_whitespace_logit << std::endl << std::endl;
+    // candidates->data[whitespace_candidate_index].logit = highest_whitespace_logit;
+    // log_file << "whitespace_candidate_index = " << whitespace_candidate_index << std::endl;
+    // log_file << "highest_whitespace_logit = " << highest_whitespace_logit << std::endl << std::endl;
 
     std::vector<size_t> all_vector;
     for (size_t i = 0; i < candidates->size; ++i) {
