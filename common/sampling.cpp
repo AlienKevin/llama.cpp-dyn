@@ -211,6 +211,18 @@ static void sampler_queue(
     }
 }
 
+std::string escape_string(const std::string& input) {
+    std::string output;
+    for (char c : input) {
+        switch (c) {
+            case '\\': output += "\\\\"; break;
+            case '\"': output += "\\\""; break;
+            default: output += c; break;
+        }
+    }
+    return output;
+}
+
 // Function to check if the string ends with a substring repeating 5 or more times
 bool ends_with_repeated_substring(const std::string& str, int max_length, int min_repetitions) {
     for (int len = 1; len <= max_length; ++len) { // Length of the substring
@@ -319,8 +331,8 @@ llama_token llama_sampling_sample(
     if (!params.dynamic_grammar.empty()) {
         // The last token just sampled will be the new token
         auto new_token = llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - 1]);
-        std::string command = "node ../lsp.js --constrain " + params.dynamic_grammar + " --prelude ../autoregressive.prelude --ctx init --debug true --new-token \"" + new_token + "\" ";
-        command += "\"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len, 1) + "\"";
+        std::string command = "node ../lsp.js --constrain " + params.dynamic_grammar + " --prelude ../autoregressive.prelude --ctx init --debug true --new-token \"" + escape_string(new_token) + "\" ";
+        command += "\"" + escape_string(llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len, 1)) + "\"";
 
         std::string output = exec(command.c_str());
         std::string grammar_str = fix_grammar(extract_substring_after_delimiter(output, "LSP: Grammar:\n"));
