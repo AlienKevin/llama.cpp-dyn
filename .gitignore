@@ -1,3 +1,7 @@
+*.zipper.seralized
+*.ctx.seralized
+log.txt
+
 *.o
 *.a
 *.so
