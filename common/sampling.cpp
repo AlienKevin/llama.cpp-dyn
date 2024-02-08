@@ -275,8 +275,9 @@ llama_token llama_sampling_sample(
     if (!params.dynamic_grammar.empty()) {
         // The last token just sampled will be the new token
         auto new_token = llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - 1]);
-        std::string command = "node ../lsp.js --constrain " + params.dynamic_grammar + " --prelude ../autoregressive.prelude --ctx init --debug true --new-token " + new_token;
-        command += " \"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len) + "\"";
+        std::string command = "node ../lsp.js --constrain " + params.dynamic_grammar + " --prelude ../autoregressive.prelude --ctx init --debug true --new-token \"" + new_token + "\" ";
+        command += "\"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len, 1) + "\"";
+
         std::string output = exec(command.c_str());
         std::string grammar_str = fix_grammar(extract_substring_after_delimiter(output, "LSP: Grammar:\n"));
         
@@ -286,9 +287,9 @@ llama_token llama_sampling_sample(
 
         if (log_file.is_open()) {
             // Write the log message to the file
-            log_file << std::endl << "================" << std::endl << llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len) << std::endl << std::endl;
-            // log_file << "\nGrammar:" << std::endl;
-            // log_file << output << std::endl;
+            log_file << std::endl << "================" << std::endl << llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len, 0) << std::endl << std::endl;
+            // log_file << "\nCommand:" << std::endl;
+            // log_file << command << std::endl;
             log_file << output << std::endl;
 
             // Close the file
