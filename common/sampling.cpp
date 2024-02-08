@@ -98,15 +98,13 @@ void llama_sampling_set_prelude_len(llama_sampling_context * ctx, size_t prelude
     ctx->prelude_len = prelude_len;
 }
 
-std::string llama_sampling_prev_all_str(llama_sampling_context * ctx_sampling, llama_context * ctx_main, int skip_tokens) {
+std::string llama_sampling_prev_all_str(llama_sampling_context * ctx_sampling, llama_context * ctx_main, int start_skip_tokens, int end_skip_tokens) {
     std::string result;
 
-    for (auto token : ctx_sampling->prev_all) {
-        if (skip_tokens > 0) {
-            skip_tokens--;
-        } else {
-            result += llama_token_to_piece(ctx_main, token);
-        }
+    auto total_tokens = ctx_sampling->prev_all.size();
+    for (auto i = start_skip_tokens; i < total_tokens - end_skip_tokens; ++i) {
+        auto token = ctx_sampling->prev_all[i];
+        result += llama_token_to_piece(ctx_main, token);
     }
 
     return result;
@@ -275,8 +273,10 @@ llama_token llama_sampling_sample(
     }
 
     if (!params.dynamic_grammar.empty()) {
-        std::string command = "node ../lsp.js --constrain " + params.dynamic_grammar + " --prelude ../autoregressive.prelude --ctx init --debug true ";
-        command += "\"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len) + "\"";
+        // The last token just sampled will be the new token
+        auto new_token = llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - 1]);
+        std::string command = "node ../lsp.js --constrain " + params.dynamic_grammar + " --prelude ../autoregressive.prelude --ctx init --debug true --new-token " + new_token;
+        command += " \"" + llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len) + "\"";
         std::string output = exec(command.c_str());
         std::string grammar_str = fix_grammar(extract_substring_after_delimiter(output, "LSP: Grammar:\n"));
         
