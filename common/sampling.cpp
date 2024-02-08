@@ -211,6 +211,35 @@ static void sampler_queue(
     }
 }
 
+// Function to check if the string ends with a substring repeating 5 or more times
+bool ends_with_repeated_substring(const std::string& str, int max_length, int min_repetitions) {
+    for (int len = 1; len <= max_length; ++len) { // Length of the substring
+        if (str.length() < min_repetitions * len) continue; // Ensure there's enough length for the minimum repetitions
+
+        bool is_repeating = true;
+        std::string last_sub = str.substr(str.length() - len); // Last substring of length 'len'
+
+        // Check if the substring is a continuous stretch of spaces or tabs
+        if (std::all_of(last_sub.begin(), last_sub.end(), [](char c) { return c == ' ' || c == '\t'; })) {
+            continue;
+        }
+
+        // Check for the minimum number of consecutive repetitions
+        for (int rep = 1; rep < min_repetitions; ++rep) {
+            std::string test_sub = str.substr(str.length() - (rep + 1) * len, len);
+            if (last_sub != test_sub) {
+                is_repeating = false;
+                break; // No need to check further if any preceding substring doesn't match
+            }
+        }
+
+        if (is_repeating) {
+            return true; // Found a substring that repeats the minimum number of times
+        }
+    }
+    return false; // No such repetition found
+}
+
 llama_token llama_sampling_sample(
                   struct llama_sampling_context * ctx_sampling,
                   struct llama_context * ctx_main,
@@ -276,6 +305,14 @@ llama_token llama_sampling_sample(
     std::string last_two_tokens_str = llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - 2]);
     last_two_tokens_str += llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - 1]);
     if (last_two_tokens_str[last_two_tokens_str.size() - 2] == '\n' && last_two_tokens_str[last_two_tokens_str.size() - 1] == '\n') {
+        exit(0);
+    }
+
+    auto prev_all_str = llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len, 0);
+    int max_length = 10; // Maximum length of substrings to check for repetitions
+    int min_repetitions = 5; // Minimum number of times a substring must repeat to count
+    if (ends_with_repeated_substring(prev_all_str, max_length, min_repetitions))
+    {
         exit(0);
     }
 
@@ -345,6 +382,21 @@ llama_token llama_sampling_sample(
         //     std::cerr << "Unable to open the log_grammar.txt" << std::endl;
         // }
         llama_sample_grammar(ctx_main, &cur_p, ctx_sampling->grammar);
+    } else {
+        std::ofstream log_file;
+        // Open the log file in append mode
+        log_file.open("log.txt", std::ios::app);
+
+        if (log_file.is_open()) {
+            // Write the log message to the file
+            log_file << std::endl << "================" << std::endl << llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len, 0) << std::endl << std::endl;
+
+            // Close the file
+            log_file.close();
+        } else {
+            // Handle the error if the file couldn't be opened
+            std::cerr << "Unable to open the log file." << std::endl;
+        }
     }
 
     if (temp < 0.0) {
