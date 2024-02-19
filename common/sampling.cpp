@@ -321,7 +321,7 @@ llama_token llama_sampling_sample(
     }
 
     auto prev_all_str = llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len, 0);
-    int max_length = 10; // Maximum length of substrings to check for repetitions
+    int max_length = 30; // Maximum length of substrings to check for repetitions
     int min_repetitions = 5; // Minimum number of times a substring must repeat to count
     if (ends_with_repeated_substring(prev_all_str, max_length, min_repetitions))
     {
@@ -331,7 +331,7 @@ llama_token llama_sampling_sample(
     if (!params.dynamic_grammar.empty()) {
         // The last token just sampled will be the new token
         auto new_token = llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - 1]);
-        std::string command = "node ../lsp.js --constrain " + params.dynamic_grammar + " --prelude ../autoregressive.prelude --ctx init --debug true --new-token \"" + escape_string(new_token) + "\" ";
+        std::string command = "node ../lsp.js COMPLETIONS " + params.dynamic_grammar + " --prelude ../autoregressive.prelude --debug --new-token \"" + escape_string(new_token) + "\" ";
         command += "\"" + escape_string(llama_sampling_prev_all_str(ctx_sampling, ctx_main, ctx_sampling->prelude_len, 1)) + "\"";
 
         std::string output = exec(command.c_str());
