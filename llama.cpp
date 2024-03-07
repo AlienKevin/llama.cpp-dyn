@@ -7713,13 +7713,17 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
     }
 
     const auto rejects = llama_grammar_reject_candidates(grammar->rules, grammar->stacks, candidates_grammar);
-    std::unordered_set<size_t> accepted_indices;
-    for (size_t i = 0; i < candidates->size; i++) {
-        accepted_indices.insert(i);
-    }
+    // std::unordered_set<size_t> accepted_indices;
+    // for (size_t i = 0; i < candidates->size; i++) {
+    //     accepted_indices.insert(i);
+    // }
     for (const auto & reject : rejects) {
+        if (all_vector[0] == reject.index) {
+            log_file << "Rejected the highest logit candidate " << llama_token_to_piece(ctx, candidates->data[reject.index].id) << " with logit " << candidates->data[reject.index].logit << std::endl;
+        }
+
         candidates->data[reject.index].logit = -INFINITY;
-        accepted_indices.erase(accepted_indices.find(reject.index));
+        // accepted_indices.erase(accepted_indices.find(reject.index));
     }
 
     // Print accepted candidates
