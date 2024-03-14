@@ -225,6 +225,14 @@ std::string escape_string(const std::string& input) {
 
 // Function to check if the string ends with a substring repeating 5 or more times
 bool ends_with_repeated_substring(const std::string& str, int max_length, int min_repetitions) {
+    // Check for excessively repeated spaces (>= 40 times)
+    if (str.length() >= 40) {
+        std::string last_sub = str.substr(str.length() - 40);
+        if (std::all_of(last_sub.begin(), last_sub.end(), [](char c) { return c == ' ' || c == '\t'; })) {
+            return true;
+        }
+    }
+    
     for (int len = 1; len <= max_length; ++len) { // Length of the substring
         if (str.length() < min_repetitions * len) continue; // Ensure there's enough length for the minimum repetitions
 
