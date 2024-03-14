@@ -7697,6 +7697,8 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
         return candidates->data[a].logit > candidates->data[b].logit;
     });
 
+    const auto rejects = llama_grammar_reject_candidates(grammar->rules, grammar->stacks, candidates_grammar);
+
     int num_logits_logged = 0;
     for (const auto & i : all_vector) {
         // Log the top 20 logits
@@ -7704,7 +7706,14 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
             break;
         }
         if (log_file.is_open()) {
-            log_file << llama_token_to_piece(ctx, candidates->data[i].id) << ":" << candidates->data[i].logit << std::endl;
+            bool rejected = false;
+            for (const auto & reject : rejects) {
+                if (reject.index == i) {
+                    rejected = true;
+                    break;
+                }
+            }
+            log_file << llama_token_to_piece(ctx, candidates->data[i].id) << ":" << candidates->data[i].logit << (rejected ? " (rejected)" : "") << std::endl;
         } else {
             // Handle the error if the file couldn't be opened
             std::cerr << "Unable to open the log file." << std::endl;
@@ -7712,7 +7721,6 @@ void llama_sample_grammar(struct llama_context * ctx, llama_token_data_array * c
         num_logits_logged++;
     }
 
-    const auto rejects = llama_grammar_reject_candidates(grammar->rules, grammar->stacks, candidates_grammar);
     // std::unordered_set<size_t> accepted_indices;
     // for (size_t i = 0; i < candidates->size; i++) {
     //     accepted_indices.insert(i);
