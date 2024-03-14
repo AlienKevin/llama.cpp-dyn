@@ -252,6 +252,13 @@ bool ends_with_repeated_substring(const std::string& str, int max_length, int mi
     return false; // No such repetition found
 }
 
+// https://stackoverflow.com/a/2072890/6798201
+inline bool ends_with(std::string const &value, std::string const &ending) {
+    if (ending.size() > value.size())
+        return false;
+    return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
+}
+
 llama_token llama_sampling_sample(
                   struct llama_sampling_context * ctx_sampling,
                   struct llama_context * ctx_main,
@@ -314,9 +321,12 @@ llama_token llama_sampling_sample(
     }
 
     // Early exit when a function is finished
-    std::string last_two_tokens_str = llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - 2]);
-    last_two_tokens_str += llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - 1]);
-    if (last_two_tokens_str[last_two_tokens_str.size() - 2] == '\n' && last_two_tokens_str[last_two_tokens_str.size() - 1] == '\n') {
+    std::string last_few_tokens_str = "";
+    for (int i = 3; i > 0; i--) {
+        last_few_tokens_str += llama_token_to_piece(ctx_main, ctx_sampling->prev_all[ctx_sampling->prev_all.size() - i]);
+    }
+
+    if (ends_with(last_few_tokens_str, "in\n\n")) {
         exit(0);
     }
 
